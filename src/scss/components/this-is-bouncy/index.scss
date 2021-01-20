@@ -1,0 +1,51 @@
+.this-is-bouncy {
+    $self: &;
+    margin-top: 110px;
+
+    .text {
+        width: 100%;
+        max-width: 440px;
+        margin-bottom: 36px;
+        line-height: 1.6;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 833px;
+
+        margin: 0 auto;
+
+        .left-column {
+            margin-right: 100px;
+
+            .section__header {
+                text-align: left;
+
+                .title {
+                    margin-bottom: 41px;
+                }
+            }
+
+            #{$self}__btn {
+                padding: 12px 20px;
+                color: $black;
+                background-color: transparent;
+                border: 1px solid $black;
+                border-radius: 18.5px;
+                transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+
+                &:hover {
+                    color: #fff;
+                    background-color: $black;
+                }
+            }
+        }
+
+        .right-column {
+            width: 100%;
+            transform: translateY(-30px);
+        }
+    }
+}

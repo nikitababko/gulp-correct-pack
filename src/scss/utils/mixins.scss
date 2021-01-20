@@ -1,0 +1,170 @@
+@mixin text-title {
+    margin-bottom: 40px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    color: $light-black;
+}
+
+@mixin text {
+    font-family: "Open Sans", sans-serif;
+    color: $light-grey;
+    line-height: 1.6;
+
+    .green {
+        font-weight: bold;
+        color: $green;
+    }
+
+    .black {
+        font-weight: bold;
+        color: $black;
+    }
+}
+
+@mixin icons {
+    border: none;
+    border-radius: 50%;
+    background-color: $light-grey;
+    transition: background-color 0.4s ease-in-out;
+
+    &.active {
+        background-color: $green;
+    }
+
+    &:hover {
+        background-color: $green;
+    }
+
+    i {
+        padding: 16px 14px;
+        color: #fff;
+    }
+}
+
+@mixin submit {
+    display: flex;
+    background-image: url("../img/projects/4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 113px;
+
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .submit-text {
+        font-family: "Open Sans", sans-serif;
+        font-size: 20px;
+        color: #c3e8e0;
+
+        .white {
+            color: #fff;
+            font-weight: bold;
+        }
+    }
+
+    .submit-btn {
+        padding: 12px 23px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        color: #fff;
+        background-color: transparent;
+        border: 1px solid #fff;
+        border-radius: 18.5px;
+        transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+
+        &:hover {
+            color: $green;
+            background-color: #fff;
+        }
+    }
+}
+
+@mixin carousel-control {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    &__item {
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        border: 1px solid $green;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.4s ease-in-out;
+
+        &:hover {
+            background-color: $green;
+        }
+
+        &.active {
+            background-color: $green;
+        }
+    }
+}
+
+@mixin background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin submit-btn {
+    padding: 15px 50px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $green;
+    border: none;
+    transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+
+    &:hover {
+        color: $green;
+        background-color: #fff;
+    }
+}
+
+@mixin arrow-btn-down {
+    display: flex;
+    justify-content: center;
+
+    .arrow__btn {
+        border: none;
+        background: transparent;
+
+        i {
+            font-size: 45px;
+            color: #fff;
+            background-color: $green;
+            border-radius: 50%;
+            transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+
+            &:hover {
+                color: $green;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+@mixin fade-carousel {
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.about {
+    background-color: $bg-grey;
+
+    &__control-panel {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+
+        .control-panel-item {
+            margin: 0 14px;
+
+            @include icons;
+        }
+    }
+
+    &__content-title {
+        @include text-title;
+    }
+
+    &__inner {
+        display: flex;
+        font-family: "Open Sans", sans-serif;
+    }
+
+    &__inner-left-column {
+        width: 310px;
+        margin-right: 120px;
+
+        @include text;
+    }
+
+    &__inner-right-column {
+        display: block;
+        margin: 0 auto;
+        width: 550px;
+        font-family: "Open Sans", sans-serif;
+        color: $light-grey;
+        line-height: 1.6;
+
+        .green {
+            font-weight: bold;
+            color: $green;
+        }
+
+        .black {
+            font-weight: bold;
+            color: $black;
+        }
+    }
+}

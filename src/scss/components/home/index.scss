@@ -1,0 +1,93 @@
+.header {
+    position: absolute;
+    z-index: 15;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 47px 98px 0;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    transition: padding 0.4s ease-in-out;
+
+    .logo-wrapper {
+        margin-right: 350px;
+
+        .logo {
+            font-family: "Open Sans", sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.header--fixed {
+    background-color: #7c664e;
+    position: fixed;
+    padding: 20px 98px 20px;
+}
+
+.nav {
+    ul {
+        display: flex;
+
+        li {
+            a {
+                position: relative;
+                padding: 2px 12px;
+                font-family: "Open Sans", sans-serif;
+                font-size: 16px;
+                color: $grey;
+                text-decoration: none;
+                border: 1px solid $grey;
+                border-radius: 16.5px;
+                border-color: transparent;
+                transition: border-color 0.4s ease-in-out;
+
+                &:hover {
+                    border-color: $grey;
+                }
+            }
+        }
+    }
+}
+
+.home {
+    $self: &;
+    background-image: url("../img/home/bg.jpg");
+    @include background;
+    height: 100vh;
+    margin: 0 auto;
+
+    &__content {
+        padding-top: 33vh;
+        width: 100%;
+        max-width: 610px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 45px;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 35px;
+        color: $grey;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+    }
+
+    &__subtitle {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        color: $grey;
+        line-height: 1.6;
+        margin-bottom: 33vh;
+    }
+
+    .arrow__btn-wrapper {
+        @include arrow-btn-down;
+    }
+}

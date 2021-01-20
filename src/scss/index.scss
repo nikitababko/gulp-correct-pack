@@ -1,0 +1,155 @@
+@import "./utils/reset.scss";
+@import "./utils/vars.scss";
+@import "./utils/mixins.scss";
+@import "../fonts/Icon-font-7-stroke-PIXEDEN-v-1.2.0/pe-icon-7-stroke/css/pe-icon-7-stroke.css";
+
+// PC
+@import "./components/home/index.scss";
+@import "./components/this-is-bouncy/index.scss";
+@import "./components/about/index.scss";
+@import "./components/projects/index.scss";
+@import "./components/services/index.scss";
+@import "./components/mac/index.scss";
+@import "./components/portfolio/index.scss";
+@import "./components/team/index.scss";
+@import "./components/testimonials/index.scss";
+@import "./components/news/index.scss";
+@import "./components/price/index.scss";
+@import "./components/subscribe/index.scss";
+@import "./components/contact/index.scss";
+@import "./components/footer/index.scss";
+
+// Media
+@import "./components/home/media.scss";
+@import "./components/this-is-bouncy/media.scss";
+@import "./components/about/media.scss";
+@import "./components/projects/media.scss";
+@import "./components/services/media.scss";
+@import "./components/mac/media.scss";
+@import "./components/portfolio/media.scss";
+@import "./components/team/media.scss";
+@import "./components/testimonials/media.scss";
+@import "./components/news/media.scss";
+@import "./components/price/media.scss";
+@import "./components/subscribe/media.scss";
+@import "./components/contact/media.scss";
+
+// Main
+html {
+    scroll-behavior: smooth;
+}
+
+.page-wrapper {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 98px;
+}
+
+.section {
+    padding: 80px 0 100px;
+
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+
+    .section__header {
+        text-align: center;
+        width: 464px;
+        margin: 0 auto 60px;
+
+        .title {
+            margin-bottom: 30px;
+            font-family: "Source Sans Pro", sans-serif;
+            font-size: 20px;
+            color: $black;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .subtitle {
+            font-family: "Open Sans", sans-serif;
+            font-size: 14px;
+            color: $light-grey;
+            line-height: 1.6;
+        }
+    }
+
+    .text {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        color: $light-grey;
+    }
+}
+
+// Filter
+.container--active {
+    overflow: hidden;
+}
+
+.filterDiv,
+.filterDivServices,
+.filterDivPortfolio {
+    display: none; /* Hidden by default */
+    transition: opacity 1s ease-in-out;
+    animation: mymove 1s ease-in-out forwards;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+@keyframes mymove {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+// Media
+@media screen and (max-width: $tabletM) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .header {
+        padding: 24px 15px;
+
+        .burger-menu {
+            right: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section {
+        .section__header {
+            width: 350px;
+        }
+    }
+}
+
+@media screen and (max-width: $mobileM) {
+    .section {
+        .section__header {
+            width: 300px !important;
+        }
+    }
+}
